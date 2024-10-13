@@ -23,6 +23,4 @@ label start:
 
     kirya "дароу"
 
-    kirya "как дела"
-    
     return
