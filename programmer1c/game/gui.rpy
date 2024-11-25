@@ -29,7 +29,7 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#000000'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#FFFFFF'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/темнее,
 ## для того, чтобы выделяться.
@@ -89,7 +89,7 @@ define gui.title_text_size = 75
 ## Главное и игровое меню. #####################################################
 
 ## Изображения, используемые в главном и игровом меню.
-define gui.main_menu_background = "gui/test_fon.jpg"
+define gui.main_menu_background = "gui/Main_menu_v2.jpg"
 define gui.game_menu_background = "gui/game_menu.png"
 
 

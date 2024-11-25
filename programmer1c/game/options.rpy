@@ -18,12 +18,12 @@ define config.name = _("programmer1c")
 ## Определяет, показывать ли заголовок, данный выше, на экране главного меню.
 ## Установите на False, чтобы спрятать заголовок.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## Версия игры.
 
-define config.version = "1.0"
+define config.version = "Beta 0.0.0.0.1"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "programmer1c"
+define build.name = "Best_Game_Ever"
 
 
 ## Звуки и музыка ##############################################################
@@ -121,7 +121,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## в то время как любая другая цифра — это количество символов, печатаемых в
 ## секунду.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 10
 
 
 ## Стандартная задержка авточтения. Большие значения означают долгие ожидания, а
