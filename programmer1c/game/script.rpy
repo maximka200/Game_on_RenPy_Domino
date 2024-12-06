@@ -10,21 +10,27 @@ define Vincent = Character('Винсент', color = "#FFFFFF")
 define Agent = Character('Нэйт', color = "#FFFFFF")
 define Bella_Human = Character('Белла_человек', color = '#FFF000')
 
+define getup_count = 0
+
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
 # Например, сцену bg room можно вызвать файлом "bg room.png",
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
+image Neit_1:
+    "Neit 1.png"
+    zoom 0.75
+
+
 # Игра начинается здесь:
 label start:
+    # Сцена 1, Фон 1, Участники: Nate
+    scene scene_mainroom_v3
 
-    scene bg room
-
-    show eileen happy
+    show Neit_1 at right
 
     # Пример вывода фразы: e "Вы создали новую игру Ren'Py."
 
-    # Сцена 1, Фон 1, Участники: Nate
     Nate "Утро доброе… Какой сегодня день?.. А не важно, в любом случае я не хочу вставать."
 
     Nate "Для меня это нормально, я часто провожу свои дни за компьютером или телефоном, иногда вообще не вставая с кровати."
@@ -54,6 +60,5 @@ label start:
     Nate "Может завтра? Меня всë ещë клонит в сон, но могу ли я позволить себе откладывать это дело?"
 
     # Прописать Выбор
-
 
     return
