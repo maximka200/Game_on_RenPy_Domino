@@ -18,7 +18,7 @@ define getup_count = 0
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
 image Neit_1:
-    "Neit 1.png"
+    "Neit_emotion_v1.png"
     zoom 0.75
 
 
