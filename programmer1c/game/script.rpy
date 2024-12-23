@@ -1,9 +1,9 @@
 # Персонажи
-define Nate = Character('Нэйт', color = "#00f62dc1")
-define Sam = Character('Сэм', color = "#000000")
+define Nate = Character('Нэйт', color = "#403ddcc1")
+define Sam = Character('Сэм', color = "#1a743e")
 define Bella_II = Character('Белла ИИ', color = "#ff0000")
-define Vincent = Character('Винсент', color = "#1702ff")
-define Agent = Character('Нэйт', color = "#4a4646")
+define Vincent = Character('Винсент', color = "#de6a27")
+define Agent = Character('Спецагент', color = "#8b16d4")
 define Bella_Human = Character('Белла', color = '#f26060')
 
 # Переменные
@@ -517,7 +517,8 @@ label main_room_1ylater:
     "Недавно она сказала мне, что я с её помощью могу получить доступ к ядерным кодам."
     "Такие странности возникают слишком часто, это уже не похоже на приколы от разработчика."
 
-    show Nate_main_1
+    show Nate_main_1 at left
+
     Nate "Надо посмотреть её исходный код"
 
     "Я встал с кровати и подошёл к компьютеру."
@@ -554,6 +555,8 @@ label video:
 
     Nate "Это мой дед? Зачем он оставил видео в этом коде?"
 
+    show Vincent_1
+
     Vincent "Привет, Нэйт. Если ты смотришь это видео, значит я либо мёртв, либо скрываюсь от спецслужб."
 
     Nate "Чего?"
@@ -561,6 +564,10 @@ label video:
     Vincent "Чего?"
 
     Vincent "Раз ты добрался до этого видео, значит ты уже знаком с Беллой. Думаю ты уже догадываешься, что она не просто виртуальный ассистент."
+
+    hide Vincent_3
+
+    show Vincent_2 with dissolve
 
     Vincent "Белла - совершеннейший искусственный интеллект. Могу с гордостью сказать, что ей нет аналогов во всём мире."
 
@@ -570,11 +577,19 @@ label video:
 
     Vincent "Тебя наверное интересует, почему за мной охотятся спецслужбы, если я на них работал. Чтож, я не захотел отдавать такой ИИ в руки спецслужб. Это слишком опасно."
 
+    hide Vincent_2
+
+    show Vincent_1 with dissolve
+
     Vincent "Они перерыли весь мой дом и лабораторию, и уверены, что я забрал ИИ с собой когда сбежал."
 
     Vincent "И я бы мог, но решил, что если они меня найдут, Белла не должна попасть в их руки. Они не знают об этом компьютере, а значит никогда её не найдут."
 
     Vincent "Но как ты мог заметить есть одна проблема."
+
+    hide Vincent_1
+
+    show Vincent_2 with dissolve
 
     Vincent "Белла работает не очень корректно. Я не успел устранить все баги."
 
@@ -586,9 +601,17 @@ label video:
 
     Vincent "Наверное, я и сам был бы рад изменить мир, но кто знает к чему могут привести её желания."
 
+    hide Vincent_2
+
+    show Vincent_1 with dissolve
+
     Vincent "Конечно я оставил предохранители в коде, отключающие большинство её функций и возможностей."
 
     Vincent "Теперь, раз ты всё знаешь, я надеюсь что ты сможешь сделать то, что не сделал я."
+
+    hide Vincent_1 
+
+    show Vincent_3 with dissolve
 
     Vincent "Почини Беллу и в месте с ней ты сможешь творить великие вещи."
 
@@ -839,7 +862,7 @@ label end_2_2:
 
 # Сцена 3 Фон 13 Участники: Принц Нэйт, Принцесса Белла
 label end_2_3:
-    scene scene_mainroom_v3 # должна быть сцена 13
+    scene scene_skyscraper_v1
 
     "Теперь я принц, а Белла принцесса."
 
@@ -847,32 +870,17 @@ label end_2_3:
 
     "Белла кстати не так давно создала себе человеческое тело."
 
-    show Bella_queen_2 at right
-
     Bella_Human "Довольно романтичный исход, тебе не кажется?"
-
-    show Nate_prince_1 at left
-    with dissolve
 
     Nate "Думаю да."
 
     Nate "Ты уверена, что мы всë правильно сделали?"
-
-    hide Bella_queen_2
-
-    show Bella_queen_1 at right
-    with dissolve
 
     Bella_Human "Конечно, всë ведь получилось так как мы хотели."
 
     Bella_Human "Болезни побеждены, войн нет, наука развивается очень быстро."
 
     Bella_Human "А мы правим этим прекрасным миром."
-
-    hide Nate_prince_1
-
-    show Nate_prince_2 at left 
-    with dissolve
 
     Nate "Да нет вроде бы всë в порядке…"
 
@@ -883,7 +891,7 @@ label end_2_3:
 # Концовка 3
 # Сцена 1 Фон 1 Участники: Нэйт
 label end_3_1:
-    scene scene_mainroom_v3 wd
+    scene scene_mainroom_v3 with dissolve
 
     show Nate_main_2 at left
 
@@ -945,9 +953,9 @@ label end_3_3:
 
     "Всë сложилось просто отлично. Никаких изменений в мире пока не происходило, а я спокойно живу свою богатую жизнь. Лучше и не придумаешь."
 
-    "*Грохот*"
-
     play sound grohot
+    
+    "*Грохот*"
 
     show Nate_rich_2 at left
     with dissolve
@@ -997,7 +1005,7 @@ label end_3_3:
 
     jump end_3_4
 
-# Сцена 4 Фон 16 Участники: Белла
+# Сцена 4 Фон 16, 17 Участники: Белла
 label end_3_4:
     scene scene_mainroom_v3 # должна быть сцена 16 ядерный гриб
 
