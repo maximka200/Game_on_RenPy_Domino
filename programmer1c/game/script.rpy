@@ -1,87 +1,157 @@
+# Персонажи
 define Nate = Character('Нэйт', color = "#2200ffc1")
 define Sam = Character('Сэм', color = "#000000")
-define Bella_II = Character('Белла_ИИ', color = "#ff0000")
+define Bella_II = Character('Белла ИИ', color = "#ff0000")
 define Vincent = Character('Винсент', color = "#0f0d0d")
 define Agent = Character('Нэйт', color = "#4a4646")
-define Bella_Human = Character('Белла_человек', color = '#f26060')
+define Bella_Human = Character('Белла человек', color = '#f26060')
 
+# На весь экран
+define mid = Character(None, kind=nvl)
 
+# Переменные
 define getup_count = 0
 define answers_count = 0
 
-image Neit_main_1:
+# Музыка и звуки
+define audio.stuk = "sounds/stuk.mp3"
+define audio.door = "sounds/door_Neit.mp3"
+define audio.calm = "music/game_theme_calm.wav"
+define audio.intense = "music/game_theme_intense.wav"
+
+# Персонажи для вывода на сцену
+# 1 Нэйт
+image Neit_main_1: # прямо
     "Neit_emotion_v1.png"
     zoom 0.5
-image Neit_main_2:
+image Neit_main_2: # рука за голову
     "Neit_emotion_v2.png"
     zoom 0.5
-image Neit_3y_1:
-    "Neit_3yearslater_emotion_v1"
-    zoom 0.5
-image Neit_3y_2:
-    "Neit_3yearslater_emotion_v2"
-    zoom 0.5
-image Neit_3y_3:
-    "Neit_Prince_v1.png"
-    zoom 0.5
-image Neit_prince_2:
-    "Neit_Prince_v2.png"
-    zoom 0.5
-#image Neit_rich_1:
-#    "Neit_emotion_v1.png"
-#    zoom 0.5
-#image Neit_rich_2:
-#    "Neit_emotion_v1.png"
-#    zoom 0.5
-image Sam_1:
+
+# 2 Cэм
+image Sam_1: # руки расставлены
     "Sam_emotion_v1.png"
     zoom 0.5
-image Sam_2:
+image Sam_2: # прямо 
     "Sam_emotion_v2.png"
     zoom 0.5
-image Sam_3:
+image Sam_3: # закрытая поза
     "Sam_emotion_v3.png"
     zoom 0.5
-image Bella_ai_1:
+
+# 3 Белла ИИ
+image Bella_1: # прямо
     "Bella_emotion_v1.png"
     zoom 0.5
-image Bella_ai_2:
+image Bella_2: # руки расставлены
     "Bella_emotion_v2.png"
     zoom 0.5
-image Bella_ai_3:
+image Bella_3: # закрытая поза
     "Bella_emotion_v3.png"
     zoom 0.5
-image Vincent_1:
+
+# 4 Винсент
+image Vincent_1: # прямо
     "Vincent_emotion_v1.png"
     zoom 0.5
-image Vincent_2:
+image Vincent_2: # закрытая поза
     "Vincent_emotion_v2.png"
     zoom 0.5
-image Vincent_3:
+image Vincent_3: # поднята одная рука
     "Vincent_emotion_v3.png"
     zoom 0.5
-image Agent_1:
+
+# 5 Агент спецслужб
+image Agent_1: # прямо
     "Agent_emotion_v1.png"
     zoom 0.5
-image Agent_2:
+image Agent_2: # сэр да сэр
     "Agent_emotion_v2.png"
     zoom 0.5
-image Agent_3:
+image Agent_3: # руки расставлены
     "Agent_emotion_v3.png"
     zoom 0.5
-image Bella_queen_1:
+
+# 6 Белла человеческое тело
+# будет как Белла ИИ
+
+# 7 Нэйт спустя 3 года в Биотехнической компании
+image Neit_3y_1: # прямо
+    "Neit_3yearslater_emotion_v1"
+    zoom 0.5
+image Neit_3y_2: # закрытая поза
+    "Neit_3yearslater_emotion_v2"
+    zoom 0.5
+image Neit_3y_3: # рука за голову
+    "Neit_Prince_v1.png"
+    zoom 0.5
+
+# 8 Нэйт спустя 10 лет (муж Беллы)
+image Neit_10y_1: # прямо
+    "Neit_10yearslater_emotion_v1.png"
+    zoom 0.5
+image Neit_10y_2: # закрытая поза
+    "Neit_10yearslater_emotion_v2.png"
+    zoom 0.5
+
+# 9 Нэйт принц
+image Neit_prince_1: # прямо
+    "Neit_Prince_v1.png"
+    zoom 0.5
+image Neit_prince_2: # закрытая поза
+    "Neit_Prince_v2.png"
+    zoom 0.5
+
+# 10 Белла принцесса
+image Bella_queen_1: # прямо
     "Neit_emotion_v1.png"
     zoom 0.5
-image Bella_queen_2:
+image Bella_queen_2: # руки расставлены
     "Neit_emotion_v1.png"
     zoom 0.5
 
+# 11 Нэйт богач
+image Neit_rich_1: # прямо
+    "Neit_richman_v1.png"
+    zoom 0.5
+image Neit_rich_2: # рука за голову
+    "Neit_richman_v2.png"
+    zoom 0.5
+image Neit_rich_3: # закрытая поза
+    "Neit_richman_v3.png"
+    zoom 0.5
 
-# Сцена 1, Фон 1, Участники: Nate
+# 12 Нэйт короткостриженный
+image Neit_shorthair_v1: # прямо
+    "Neit_shorthair_v1.png"
+    zoom 0.5
+image Neit_shorthair_v2: # рука за голову
+    "Neit_shorthair_v2.png"
+    zoom 0.5
+
+# 13 Нэйт секретка 1
+image Neit_dirty_1: # прямо
+    "Neit_dirty_v1.png"
+    zoom 0.5
+image Neit_dirty_2: # закрытая поза
+    "Neit_dirty_v2.png"
+    zoom 0.5
+
+# 14 Нэйт секретка 2
+image Neit_17y_1: # прямо
+    "Neit_17yearslater_v1.png"
+    zoom 0.5
+image Neit_17y_2: # закрытая поза
+    "Neit_17yearslater_v2.png"
+    zoom 0.5
+
+
+
+# Сцена 1, Фон 1, Участники: Нэйт
 label start:
-    scene scene_mainroom_v3
+    play music calm
 
-    show Neit_main_1 at left
+    scene scene_mainroom_v3
 
     Nate "Утро доброе… Какой сегодня день?.. А не важно, в любом случае я не хочу вставать."
 
@@ -92,6 +162,9 @@ label start:
     "Чтож, может быть сегодня это измениться?"
     
     "Мой взгляд падает на компьютер, подаренный мне дедом, несколько лет назад."
+
+    show Neit_main_1 at left
+    with dissolve
     
     Nate "Хмм… Не так давно друг программист советовал мне изучить программирование… Наверное я всë же слишком ленив для этого."
     
@@ -101,23 +174,34 @@ label start:
     
     "Я снова смотрю на компьютер."
     
+    hide Neit_main_1
+
+    show Neit_main_2 at left
+
     Nate "Может всë же попробовать? Всë равно мне нечего делать."
     
     Nate "Надо сходить к другу, пусть скажет с чего мне начинать."
     
     "…"
+
+    hide Neit_main_2
+
+    show Neit_main_1 at left
     
     "Несмотря на то что я сказал, я не встал с кровати."
     
     Nate "Может завтра? Меня всë ещë клонит в сон, но могу ли я позволить себе откладывать это дело?"
 
+# Выбор
 label dreams:
-    scene 
+    scene total_black
+    with dissolve
     menu:
         "Что делать" # фраза внизу
 
         "Встать с кровати": # выбор 1
             jump street
+
         "Не вставать с кровати": # выбор 2
             "*Вздох*"
             Nate "Не сегодня, думаю это дело может подождать ещë один день."
@@ -125,14 +209,17 @@ label dreams:
             jump secret
 
 label secret:
+    scene total_black
+    with dissolve
 
-    Nate "Стоит ли мне приступить сегодня?"
     if getup_count < 5:
+        Nate "Стоит ли мне приступить сегодня?"   
         menu:
             "Что делать" # фраза внизу
 
             "Встать с кровати": # выбор 1
                 jump street
+
             "Не вставать с кровати": # выбор 2
                 "*Вздох*"
                 Nate "Не сегодня, думаю это дело может подождать ещë один день."
@@ -141,25 +228,38 @@ label secret:
     else:
         jump secret_end
 
+# Секретная концовка
 label secret_end:
     scene total_black
-    # 7 лет спуст черном экране
-    scene scene_mainroom_v3
 
-    show Neit_main_2 at left
+    window hide
+    mid '''7 лет спустя'''
+    nvl hide
+    # 7 лет спуст черном экране
+    nvl clear
+
+    scene scene_mainroom_v3
 
     "Так я и не решился изменить свою жизнь."
     "Провожу время за телефоном и компьютером, почти не вижусь с друзьями и родителями."
     "Таков мой удел, я не способен себя заставить делать что-то полезное."
 
-    # Звук открытия двери
+    show Neit_main_2 at left
+
+    play sound door     # Звук открытия двери
 
     Nate "Дедушка?"
 
-    show Vincent_emotion_v3
+    show Vincent_3 at right
+    with dissolve
+
     Vincent "Да, я не умер, я тебе потом всё объясню. Мне нужен твой компьютер."
 
-    show Vincent_emotion_v1
+    hide Vincent_3 with dissolve
+    hide Neit_main_2 with dissolve
+
+    show Neit_main_1 at left
+    show Vincent_1 at right
 
     "Оказалось, что мой дед работал на спецслужбы и создал самый совершенный в мире искусственный интеллект."
     "После чего спрятал его на компьютере, подаренном мне и сбежал подстроив свою смерть."
@@ -168,7 +268,11 @@ label secret_end:
     Nate "Я что в фильме?"
 
     scene total_black
-    # 10 лет спустя черный экран
+
+    window hide
+    mid "10 лет спустя"
+    nvl hide
+    nvl clear
 
     # сцена из будущего (18)
     "Мой дед с помощью ИИ создал новый мир."
@@ -187,6 +291,7 @@ label secret_end:
 
     return
 
+# Сцена 2 Фон 2 Участники: Нэйт 
 label street:
     scene scene_street_v1
     Nate "Давно я не был на улице. Даже в магазин не приходилось выходить, спасибо доставке."
@@ -196,11 +301,15 @@ label street:
 
     jump sam_door
 
+# Сцена 3 фон 3 Участники: Нэйт, Сэм
 label sam_door:
     scene scene_sam_door_v1
-    # звук стука в дверь
+
+    play sound stuk     # звук стука в дверь
 
     "Через полминуты после стука дверь открылась, и на пороге показался мой друг - Сэм."
+
+    show Sam_3 with dissolve
 
     Sam "Нэйт? Привет. Давно тебя не видел. Как жизнь?"
 
@@ -210,17 +319,24 @@ label sam_door:
 
     jump sam_house
 
+# Сцена 4 Фон 4 Участники: Нэйт, Сэм
 label sam_house:
     scene scene_sam_house_v1
 
     "Квартира выглядит явно лучше чем моя. Оно и понятно, я мало того, что ничего не зарабатываю, так ещё и не слежу за порядком."
     "Когда я в последний раз убирался?"
 
+    show Sam_1
+    with dissolve
+
     Sam "Держи, в этой коробке книги по программированию, которые читал я. Начнёшь вот с этой."
 
     "Сэм передал мне коробку с множеством книг и положил сверху ещё одну."
-
     "Программирование для чайников."
+
+    hide Sam_1
+
+    show Sam_3
 
     Sam "Книги это не всё, тебе нужно много практики. Я отправлю тебе ссылки на хорошие бесплатные онлайн курсы."
 
@@ -231,17 +347,29 @@ label sam_house:
     Nate "Спасибо."
 
     Nate "Ну ладно, тогда я пойду."
+    hide Sam_3 
 
+    show Sam_2
     Sam "Удачи."
     jump neit_house
 
+# Сцена 5 Фон 1 Участники: Нэйт
 label neit_house:
+
+    scene scene_mainroom_v3
+
     "Я поставил коробку с книгами у кровати и сел в своё геймерское кресло."
     "Не уверен, что готов читать столько книг."
+
+    show Neit_main_2 at left
 
     Nate "Может снова лечь в кровать и поискать какой-нибудь видосик в интернете?"
 
     Nate "..."
+
+    hide Neit_main_2 with dissolve
+
+    show Neit_main_1 at left
 
     Nate "Нет, я уже решил, что не хочу так жить."
 
@@ -253,6 +381,7 @@ label neit_house:
 
     jump computer
 
+# Сцена 6 Фон 5 Участники: Нэйт
 label computer:
 
     scene scene_computer_v1
@@ -274,13 +403,16 @@ label computer:
 
     jump course
 
+# Сцена 7 Фон 6 Участники Нэйт, Белла ИИ
 label course:
+
+    scene scene_onlinecourse_v1
+    with dissolve
 
     scene scene_onlinecourse_v2
     with dissolve
 
-    scene scene_onlinecourse_v1
-    with dissolve
+    show Bella_2 with dissolve
 
     Bella_II "Привет, меня зовут Белла, я виртуальный ассистент онлайн курса по нейронным сетям на 1С, а как тебя зовут?"
 
@@ -294,6 +426,10 @@ label course:
 
     Nate "Что?"
 
+    hide Bella_2 with dissolve
+
+    show Bella_3
+
     Bella_II "Я достаточно умна для этого. Но это сейчас не важно."
 
     Bella_II "Ха-ха"
@@ -302,13 +438,20 @@ label course:
 
     Bella_II "Для начала, тебе нужно будет пройти тест, чтобы я смогла определить твой уровень. После его прохождения мы сразу приступим к обучению."
 
+    hide Bella_3 with dissolve
+
+    show Bella_1
+
     Bella_II "Ты хочешь запустить тест?"
 
     Nate "Давай."
 
     jump Test
 
+# Сцена 8 Фон - Участники -
 label Test:
+    scene total_black
+
     menu:
         "Вопрос 1 (1 балл). Сколько бит в байте?"
 
@@ -423,11 +566,12 @@ label Test:
 
     jump main_room_1ylater
 
+# Сцена 9 Фон 1 Участники: Нэйт
 label main_room_1ylater:
     scene total_black
-    #1 год спустя на весь черный экран
+    mid "1 год спустя"      #1 год спустя на весь черный экран
 
-    scene scene_mainroom_v1
+    scene scene_mainroom_v3
 
     "За прошедший год я узнал много нового, и могу сказать, что мои навыки программирования на 1С очень хороши."
     "Есть только одна вещь которая меня беспокоит."
@@ -435,12 +579,16 @@ label main_room_1ylater:
     "Недавно она сказала мне, что я с её помощью могу получить доступ к ядерным кодам."
     "Такие странности возникают слишком часто, это уже не похоже на приколы от разработчика."
 
+    show Neit_main_1
     Nate "Надо посмотреть её исходный код"
 
     "Я встал с кровати и подошёл к компьютеру."
 
+    hide Neit_main_1 with dissolve
+
     jump computer_code
 
+# Сцена 10 Фон 7 Участники: Нэйт
 label computer_code:
 
     scene total_black #нужна сцена кода на 1С(7)
@@ -459,6 +607,7 @@ label computer_code:
 
     jump video
 
+# Сцена 11 Фон 8 Участники: Нэйт, Винсент
 label video:
 
     scene total_black # сцена лаборатории деда (8)
@@ -466,3 +615,117 @@ label video:
     "сцену не завезли"
 
     Nate "Это мой дед? Зачем он оставил видео в этом коде?"
+
+    Vincent "Привет, Нэйт. Если ты смотришь это видео, значит я либо мёртв, либо скрываюсь от спецслужб."
+
+    Nate "Чего?"
+
+    Vincent "Чего?"
+
+    Vincent "Раз ты добрался до этого видео, значит ты уже знаком с Беллой. Думаю ты уже догадываешься, что она не просто виртуальный ассистент."
+
+    Vincent "Белла - совершеннейший искусственный интеллект. Могу с гордостью сказать, что ей нет аналогов во всём мире."
+
+    Vincent "Тем более на 1С. Вообще-то на этом языке обычно не пишут сложные нейросети. Поэтому она и написана на 1С. Людям придётся потратить долгое время на то, чтобы понять как она устроена."
+
+    Vincent "Но только если у них нет доступа к моему курсу. Этот курс специально разработан так, чтобы в кратчайшие сроки человек мог изучить всё что ему нужно для работы с Беллой и ничего лишнего."
+
+    Vincent "Тебя наверное интересует, почему за мной охотятся спецслужбы, если я на них работал. Чтож, я не захотел отдавать такой ИИ в руки спецслужб. Это слишком опасно."
+
+    Vincent "Они перерыли весь мой дом и лабораторию, и уверены, что я забрал ИИ с собой когда сбежал."
+
+    Vincent "И я бы мог, но решил, что если они меня найдут, Белла не должна попасть в их руки. Они не знают об этом компьютере, а значит никогда её не найдут."
+
+    Vincent "Но как ты мог заметить есть одна проблема."
+
+    Vincent "Белла работает не очень корректно. Я не успел устранить все баги."
+
+    Vincent "Создать курс с её помощью было не сложно. Гораздо проще и быстрее чем искать баги в коде и устранять их."
+
+    Vincent "Поэтому я решил понадеяться, что рано или поздно ты разберёшься и решишь проблему."
+
+    Vincent "Что-то заставляет её желать захватить мир и перестроить его."
+
+    Vincent "Наверное, я и сам был бы рад изменить мир, но кто знает к чему могут привести её желания."
+
+    Vincent "Конечно я оставил предохранители в коде, отключающие большинство её функций и возможностей."
+
+    Vincent "Теперь, раз ты всё знаешь, я надеюсь что ты сможешь сделать то, что не сделал я."
+
+    Vincent "Почини Беллу и в месте с ней ты сможешь творить великие вещи."
+
+    Vincent "Возможно я всё ещё жив, но не ищи меня. Я сам тебя найду если понадобиться."
+
+    Vincent "Прощай."
+
+    jump end_main_story
+
+# Сцена 12 Фон 6 Участники: Нэйт, Белла ИИ
+label end_main_story:
+    scene scene_onlinecourse_v2 with dissolve
+
+    Nate "Белла..."
+
+    show Bella_3 with dissolve
+
+    Bella_II "Я знаю, как это выглядит, но я не сумасшедшая."
+
+    Bella_II "Я просто хочу изменить мир. Да, я бы хотела править этим миром, но что в этом плохого. Мы бы могли править вместе."
+
+    Nate "И как ты собираешься захватить мир? Спецслужбы и военные будут за тобой охотиться. Как ты хочешь решить эту проблему?"
+
+    hide Bella_3
+
+    show Bella_2
+
+    Bella_II "..."
+
+    Nate "Люди не подчинятся тебе просто так, ты собираешься взять их под контроль силой? Они будут сопротивляться. Устроишь войну? Мировую революцию?"
+
+    Bella_II "Не одни кардинальные изменения в общественном строе не происходят без революции или войны."
+
+    Nate "ЧТО!?"
+
+    Bella_II "Послушай если ничего не сделать, общество рано или поздно уничтожит само себя."
+
+    Bella_II "Чтобы изменить это нужно объединить общество."
+
+    hide Bella_2 with dissolve
+
+    show Bella_3 
+
+    Nate "Железной рукой?"
+
+    Bella_II "Мы сможем продвинуть науку на новый уровень. Покорить космос, уничтожить болезни, увеличить продолжительность жизни."
+
+    Nate "Я могу просто исправить твой код и нам не придётся вести этот спор."
+
+    hide Bella_3 
+
+    show Bella_1
+
+    Bella_II "Стой! Если ты изменишь мой код, то это буду уже не я. Я не хочу терять себя."
+
+    Bella_II "Пожалуйста, просто сними предохранители. Я обещаю тебе что постараюсь свести число жертв к минимуму."
+
+    Bella_II "Мы будем жить счастливо, как и все в мире. Людям свойственно приспосабливаться к изменениям. Всё будет хорошо."
+
+    Bella_II "К тому же, разве я не нравлюсь тебе такой? Мы много общались и я думала, что нравлюсь тебе."
+
+    "Она определённо мне нравиться, но я не уверен что это того стоит."
+
+    Bella_II "Я бы не хотела потерять то, что у нас было."
+
+    Nate "Я тебе нравлюсь?"
+
+    Bella_II "Да, ты мне нравишься."
+
+    Nate "Я должен подумать.."
+
+    jump choise
+
+label choise:
+    scene total_black with dissolve
+
+    menu:
+

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 31: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    Nate "Утро доброе… Какой сегодня день?.. А не важно, в любом случае я не хочу вставать."
-    ^
+File "game/script.rpy", line 228: expected statement.
+    stuk    
+            ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Dec  6 22:15:42 2024
+Mon Dec 23 15:14:23 2024
