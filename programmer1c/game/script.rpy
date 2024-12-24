@@ -76,13 +76,13 @@ image Agent_3: # руки расставлены
 
 # 7 Нэйт спустя 3 года в Биотехнической компании
 image Nate_3y_1: # прямо
-    "Nate_3yearslater_emotion_v1"
+    "Nate_3yearslater_emotion_v1.png"
     zoom 0.5
 image Nate_3y_2: # закрытая поза
-    "Nate_3yearslater_emotion_v2"
+    "Nate_3yearslater_emotion_v2.png"
     zoom 0.5
 image Nate_3y_3: # рука за голову
-    "Nate_Prince_v1.png"
+    "Nate_3yearslater_emotion_v3.png"
     zoom 0.5
 
 # 8 Нэйт спустя 10 лет (муж Беллы)
@@ -387,7 +387,7 @@ label course:
 
 # Сцена 8 Фон - Участники -
 label Test:
-    scene total_black
+    scene scene_onlinecourse_v2 with dissolve
 
     menu:
         "Вопрос 1 (1 балл). Сколько бит в байте?"
@@ -549,13 +549,11 @@ label computer_code:
 # Сцена 11 Фон 8 Участники: Нэйт, Винсент
 label video:
 
-    scene total_black # сцена лаборатории деда (8)
-
-    "сцену не завезли"
+    scene scene_vincentslab_v1
 
     Nate "Это мой дед? Зачем он оставил видео в этом коде?"
 
-    show Vincent_1
+    show Vincent_3
 
     Vincent "Привет, Нэйт. Если ты смотришь это видео, значит я либо мёртв, либо скрываюсь от спецслужб."
 
@@ -749,7 +747,7 @@ label end_1_3:
 
     centered "3 года спустя"
 
-    scene scene_mainroom_v3 # тут должна быть сцена 9 лаборатория
+    scene scene_biotechcompany_v1
 
     show Nate_3y_3 with dissolve
 
@@ -774,7 +772,7 @@ label end_1_3:
 
 # Сцена 4 Фон 10 Участники -
 label end_1_4:
-    scene scene_mainroom_v3 # должна быть сцена 10
+    scene scene_neitslab_v1
     centered "Создание искусственного человеческого тела."
 
     centered "Именно этим мы с Беллой занимались, и теперь работа завершена."
@@ -789,7 +787,7 @@ label end_1_5:
 
     centered "10 лет спустя"
 
-    scene scene_mainroom_v3 #тут должна быть сцена 11
+    scene scene_neitspenthouse_v1
 
     show Nate_10y_1 at left
     with dissolve
@@ -909,7 +907,7 @@ label end_3_1:
 
 # Сцена 2 Фон 14 Участники: Нэйт, Агент спецслужб
 label end_3_2:
-    scene scene_mainroom_v3 with dissolve # должна быть сцена 14
+    scene scene_agentscabinet_v1 with dissolve
 
     show Agent_1
 
