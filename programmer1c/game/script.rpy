@@ -773,11 +773,11 @@ label end_1_3:
 # Сцена 4 Фон 10 Участники -
 label end_1_4:
     scene scene_neitslab_v1
-    centered "Создание искусственного человеческого тела."
+    "Создание искусственного человеческого тела."
 
-    centered "Именно этим мы с Беллой занимались, и теперь работа завершена."
+    "Именно этим мы с Беллой занимались, и теперь работа завершена."
 
-    centered "Теперь она сможет стать полноценным человеком."
+    "Теперь она сможет стать полноценным человеком."
 
     jump end_1_5
 
@@ -811,7 +811,7 @@ label end_1_5:
 # Сцена 1 Фон 7 Участники: Нэйт, Белла ИИ
 label end_2_1:
 
-    scene scene_onlinecourse_v2 # должна быть сцена 7!
+    scene total_black # должна быть сцена 7!
     "Думаю я готов снять с Беллы всё ограничения."
 
     "Я не хочу потерять еë. Она мне нравится такая какая есть."
@@ -822,11 +822,23 @@ label end_2_1:
 
     "Спустя 10 минут всё ограничения были сняты."
 
+    scene scene_onlinecourse_v2
+
+    show Bella_2
+
     Nate "Белла?.."
 
+    hide Bella_2
+
+    show Bella_1 with dissolve
+ 
     Bella_II "Спасибо, как я и обещала, мы сделаем всë с минимальными жертвами и максимальной эффективностью."
 
     Nate "Надеюсь…"
+
+    hide Bella_1
+
+    show Bella_3 with dissolve
 
     Bella_II "Всë будет в хорошо. Я в этом уверена."
 
@@ -891,7 +903,8 @@ label end_2_3:
 label end_3_1:
     scene scene_mainroom_v3 with dissolve
 
-    show Nate_main_2 at left
+    show Nate_main_2 at left 
+    with dissolve
 
     Nate "Я тут подумал, а почему бы мне не продать ИИ спецслужбам?"
 
@@ -909,7 +922,7 @@ label end_3_1:
 label end_3_2:
     scene scene_agentscabinet_v1 with dissolve
 
-    show Agent_1
+    show Agent_1 with dissolve
 
     Agent "ИИ у тебя?"
 
@@ -980,8 +993,10 @@ label end_3_3:
     hide Bella_1
     hide Nate_rich_2 at left
 
-    show Bella_3 at right
-    show Nate_rich_3 at left
+    show Bella_3 at right 
+    with dissolve
+    show Nate_rich_3 at left 
+    with dissolve
 
     Bella_Human "Эти агенты такие омерзительные… Как и всё люди. Я ненавижу людей."
 
@@ -992,12 +1007,14 @@ label end_3_3:
     hide Bella_3 
 
     show Bella_2 at right
+    with dissolve
 
     Bella_Human "Хочу чтобы ты знал, этот мир был обречён, я лишь его подтолкнула."
     
     hide Nate_rich_3
 
     show Nate_rich_1 at left
+    with dissolve
 
     Nate "Что!?"
 
@@ -1069,11 +1086,11 @@ label end_4_3:
 
     show Sam_3 with dissolve
 
-    Sam "Я думаю ещё месяц, и можно запускать. Инвесторов я нашёл. Ели всё пойдёт нормально, будем получать стабильно растущий пассивный доход."
+    Sam "Я думаю ещё месяц, и можно запускать. Инвесторов я нашёл. Если всё пойдёт нормально, будем получать стабильно растущий пассивный доход."
 
     Nate "Хорошо бы."
 
-    "Даже не знаю правильно ли я поступил? "
+    "Даже не знаю, правильно ли я поступил? "
 
     "А что если мы с Беллой действительно изменили бы мир?"
 
@@ -1136,7 +1153,7 @@ label secret_end:
 
     centered "10 лет спустя"
 
-    # сцена из будущего (18)
+    scene scene_newsity_v1
 
     show Nate_17y_1 at left 
     with dissolve
