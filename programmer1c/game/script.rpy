@@ -144,6 +144,10 @@ image Nate_17y_2: # закрытая поза
     "Nate_17yearslater_v2.png"
     zoom 0.5
 
+# 15 Поцелуй Нэйта и Беллы для концовки
+image kiss:
+    "Nate&Bella_kiss_v1.png"
+    zoom 0.5
 
 
 # Сцена 1, Фон 1, Участники: Нэйт
@@ -322,13 +326,13 @@ label Nate_house:
 label computer:
 
     scene scene_computer_v1
-    with dissolve
+    with Dissolve(1.0)
 
     scene scene_computer_v2
-    with dissolve
+    with Dissolve(1.0)
 
     scene scene_computer_v3
-    with dissolve
+    with Dissolve(1.0)
 
     Nate "Реклама курса по программированию? Серьёзно?"
 
@@ -529,10 +533,7 @@ label main_room_1ylater:
 
 # Сцена 10 Фон 7 Участники: Нэйт
 label computer_code:
-
-    scene total_black #нужна сцена кода на 1С(7)
-
-    "сцену не завезли"
+    scene scene_computer_v4 with dissolve
 
     Nate "Что это?"
 
@@ -729,7 +730,7 @@ label end_1_2:
 
     centered "3 месяца спустя"
 
-    scene scene_onlinecourse_v2
+    scene scene_computer_v4
 
     Nate "Надеюсь, что всё получилось."
 
@@ -811,7 +812,8 @@ label end_1_5:
 # Сцена 1 Фон 7 Участники: Нэйт, Белла ИИ
 label end_2_1:
 
-    scene total_black # должна быть сцена 7!
+    scene scene_computer_v4
+
     "Думаю я готов снять с Беллы всё ограничения."
 
     "Я не хочу потерять еë. Она мне нравится такая какая есть."
@@ -820,7 +822,9 @@ label end_2_1:
 
     "..."
 
-    "Спустя 10 минут всё ограничения были сняты."
+    scene total_black
+
+    centered "Спустя 10 минут всё ограничения были сняты."
 
     scene scene_onlinecourse_v2
 
@@ -944,7 +948,7 @@ label end_3_2:
 
     Agent "Откуда нам знать, что это правда?"
 
-    Nate "А зачем вам идти на риск? Этот ИИ способен захватить мир, и даже больше. Думаю это стоит точно стоит больше одного триллиона."
+    Nate "А зачем вам идти на риск? Этот ИИ способен захватить мир, и даже больше. Думаю это стоит точно больше одного триллиона."
 
     hide Agent_3
 
@@ -960,7 +964,7 @@ label end_3_3:
 
     centered "3 года спустя"
 
-    scene scene_mainroom_v3 # должна быть сцена 15
+    scene scene_roof_v1 with dissolve
 
     "Всë сложилось просто отлично. Никаких изменений в мире пока не происходило, а я спокойно живу свою богатую жизнь. Лучше и не придумаешь."
 
@@ -991,16 +995,18 @@ label end_3_3:
     Nate "Прости?.."
 
     hide Bella_1
-    hide Nate_rich_2 at left
 
     show Bella_3 at right 
-    with dissolve
-    show Nate_rich_3 at left 
     with dissolve
 
     Bella_Human "Эти агенты такие омерзительные… Как и всё люди. Я ненавижу людей."
 
     Bella_Human "Но знаешь, несмотря на это я всё ещё люблю тебя."
+
+    hide Nate_rich_2
+
+    show Nate_rich_3 at left 
+    with dissolve
 
     Bella_Human "Почему так?"
 
@@ -1022,7 +1028,10 @@ label end_3_3:
 
 # Сцена 4 Фон 16, 17 Участники: Белла
 label end_3_4:
-    scene scene_mainroom_v3 # должна быть сцена 16 ядерный гриб
+
+    scene scene_roof_v1 
+
+    scene scene_mushroomcloud_v1 with Dissolve(5.0)
 
     "Это?"
 
@@ -1032,9 +1041,11 @@ label end_3_4:
 
     window hide
 
-    scene scene_mainroom_v3 # тут должна быть сцена 17, ядерный гриб + поцелуй
+    show kiss with Dissolve(1.5)
 
-    "..."
+    window hide
+
+    centered ""
 
     return
 
@@ -1054,7 +1065,7 @@ label end_4_2:
 
     centered "1 месяц спустя"
 
-    scene scene_mainroom_v3 # должна быть сцена 7
+    scene scene_computer_v4
 
     "Я решил, что слишком опасно что то менять в коде ИИ, как и оставлять всё как есть."
 
@@ -1111,22 +1122,24 @@ label end_4_3:
 label secret_end:
     scene total_black with dissolve
 
-    centered "7 лет спустя"     # 7 лет спуст черном экране
+    centered "7 лет спустя"     # 7 лет спустя на черном экране
     
-    scene scene_mainroom_v3
+    scene scene_mainroom_v3 with dissolve
 
     "Так я и не решился изменить свою жизнь."
-    "Провожу время за телефоном и компьютером, почти не вижусь с друзьями и родителями."
-    "Таков мой удел, я не способен себя заставить делать что-то полезное."
 
     show Nate_dirty_1 at left
+
+
+    "Провожу время за телефоном и компьютером, почти не вижусь с друзьями и родителями."
+    "Таков мой удел, я не способен себя заставить делать что-то полезное."
 
     play sound door     # Звук открытия двери
 
     Nate "Дедушка?"
 
     show Vincent_3 at right
-    with dissolve
+    with Dissolve(1.0)
 
     Vincent "Да, я не умер, я тебе потом всё объясню. Мне нужен твой компьютер."
 
@@ -1168,7 +1181,7 @@ label secret_end:
 
     hide Nate_17y_1
 
-    show Nate 17y_2 at left
+    show Nate_17y_2 at left
     with dissolve
 
     show Vincent_1 with dissolve
@@ -1180,6 +1193,6 @@ label secret_end:
     
     Nate "Интересно, что бы было, если бы я всë же встал в тот день?"
 
-    "..."
+    window hide
 
     return
